@@ -4,18 +4,14 @@ app = Flask(__name__)
 
 #python -m virtualenv {envname}
 #fix image is not working and move it to static folder
-# def read():
-#     with open("WebsiteFolder\static\dreams.txt", 'r') as f:
-#         return [line for line in f]
-
-# @app.route('/')
-# def homepage():
-#     readed = read()
-#     return render_template('base.html', sname = readed)
+def read():
+    with open("static\dreams.txt", 'r') as f:
+        return [line for line in f]
 
 @app.route('/')
 def homepage():
-    return render_template('base.html')
+    readed = read()
+    return render_template('base.html', sname = readed)
 
 @app.route('/moon')
 def moon():
