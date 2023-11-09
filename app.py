@@ -5,9 +5,9 @@ app = Flask(__name__)
 #python -m virtualenv {envname}
 #fix image is not working and move it to static folder
 def read():
-    #with open("WebsiteFolder\static\dreams.txt", 'r') as f:
-        #return [line for line in f]
-        return "filenotfound"
+    with open("\static\dreams.txt", 'r') as f:
+        return [line for line in f]
+        #return "filenotfound"
 
 @app.route('/')
 def homepage():
