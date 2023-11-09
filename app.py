@@ -5,7 +5,7 @@ app = Flask(__name__)
 #python -m virtualenv {envname}
 #fix image is not working and move it to static folder
 def read():
-    with open("static\dreams.txt", 'r') as f:
+    with open("dreams.txt", 'r') as f:
         return [line for line in f]
         #return "filenotfound"
 
